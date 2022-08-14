@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Monuments</string>
+    <string name="welcome_to_my_travel_history">Welcome to My Travel History</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="forgot_your_password">Forgot Your Password?</string>
 </resources>
