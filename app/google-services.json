@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "202004722026",
+    "project_id": "monuments-7e49d",
+    "storage_bucket": "monuments-7e49d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202004722026:android:14a44f142a7b31fe0c7513",
+        "android_client_info": {
+          "package_name": "rs.elfak.mosis.markoilic.monuments"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202004722026-b75am2ficfihgsnfb03bccn6loiar2ri.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATqAEs0Z5Eq4ZgUcc3WbiS-QzP8of7yQE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "202004722026-b75am2ficfihgsnfb03bccn6loiar2ri.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
