@@ -17,18 +17,23 @@ class MainActivity : AppCompatActivity() {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
-        binding.mainActivityLoginBtn.setOnClickListener{
-            val intent = Intent(this, LoginActivity :: class.java);
+        binding.mainActivityLoginBtn.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java);
             startActivity(intent);
         }
 
-        binding.mainActivityRegisterBtn.setOnClickListener{
-            val intent = Intent(this, RegisterActivity :: class.java);
+        binding.mainActivityRegisterBtn.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java);
             startActivity(intent);
         }
 
         binding.mainActivityInfoIV.setOnClickListener {
             Dialogs.showInfoDialog(this)
+        }
+
+        binding.mainActivityForgetPasswordLabel.setOnClickListener{
+            val intent = Intent(this, ForgotPasswordActivity::class.java);
+            startActivity(intent);
         }
     }
 }

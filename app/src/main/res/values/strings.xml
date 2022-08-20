@@ -15,5 +15,7 @@
     <string name="info_description">My Travel History is application for tracking and menagging persons travel history, as well as users friends. You can track your progress, collect stars and share your travel experience!</string>
     <string name="info_monument_text">- Represents monument on the map</string>
     <string name="info_location_text">- Marks Your current location</string>
+    <string name="enter_your_email">Enter Your Email</string>
+    <string name="send">Send</string>
 
 </resources>
