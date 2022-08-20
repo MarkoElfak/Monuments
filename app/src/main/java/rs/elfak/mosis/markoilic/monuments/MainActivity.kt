@@ -1,5 +1,6 @@
 package rs.elfak.mosis.markoilic.monuments
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,5 +15,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+
+        binding.mainActivityLoginBtn.setOnClickListener{
+            val intent = Intent(this, LoginActivity :: class.java);
+            startActivity(intent);
+        }
     }
 }
