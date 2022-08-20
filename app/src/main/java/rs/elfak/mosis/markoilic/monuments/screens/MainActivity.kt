@@ -1,11 +1,12 @@
-package rs.elfak.mosis.markoilic.monuments
+package rs.elfak.mosis.markoilic.monuments.screens
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
 import androidx.databinding.DataBindingUtil
+import rs.elfak.mosis.markoilic.monuments.R
 import rs.elfak.mosis.markoilic.monuments.databinding.ActivityMainBinding
+import rs.elfak.mosis.markoilic.monuments.helpers.Dialogs
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,6 +25,10 @@ class MainActivity : AppCompatActivity() {
         binding.mainActivityRegisterBtn.setOnClickListener{
             val intent = Intent(this, RegisterActivity :: class.java);
             startActivity(intent);
+        }
+
+        binding.mainActivityInfoIV.setOnClickListener {
+            Dialogs.showInfoDialog(this)
         }
     }
 }

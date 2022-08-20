@@ -1,8 +1,9 @@
-package rs.elfak.mosis.markoilic.monuments
+package rs.elfak.mosis.markoilic.monuments.screens
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import rs.elfak.mosis.markoilic.monuments.R
 import rs.elfak.mosis.markoilic.monuments.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
