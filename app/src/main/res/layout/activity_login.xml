@@ -32,7 +32,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/loginUsernameLabel" />
 
-
         <TextView
             android:id="@+id/loginPasswordLabel"
             android:layout_width="wrap_content"
@@ -53,10 +52,10 @@
             android:layout_marginTop="40dp"
             android:gravity="center"
             android:hint="@string/password"
+            android:inputType="textPassword"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/loginPasswordLabel" />
-
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/loginActivityLoginBtn"
@@ -68,6 +67,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/loginEditTextPassword" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
