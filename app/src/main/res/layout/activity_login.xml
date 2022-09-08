@@ -9,11 +9,11 @@
         tools:context=".screens.LoginActivity">
 
         <TextView
-            android:id="@+id/loginUsernameLabel"
+            android:id="@+id/loginEmailLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="100dp"
-            android:text="@string/username"
+            android:text="@string/email"
             android:textColor="@color/black"
             android:textSize="25sp"
             android:textStyle="italic"
@@ -22,15 +22,15 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/loginEditTextUsername"
+            android:id="@+id/loginEditTextEmail"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:gravity="center"
-            android:hint="@string/username"
+            android:hint="@string/email"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginUsernameLabel" />
+            app:layout_constraintTop_toBottomOf="@id/loginEmailLabel" />
 
         <TextView
             android:id="@+id/loginPasswordLabel"
@@ -43,7 +43,7 @@
             android:textStyle="italic"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loginEditTextUsername" />
+            app:layout_constraintTop_toBottomOf="@id/loginEditTextEmail" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/loginEditTextPassword"
