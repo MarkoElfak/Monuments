@@ -18,4 +18,9 @@
     <string name="enter_your_email">Enter Your Email</string>
     <string name="send">Send</string>
 
+    <string name="set_profile_picture">Set profile picture</string>
+    <string name="my_travel_points">My travel points:</string>
+    <string name="my_travel_history">My Travel history:</string>
+
+
 </resources>

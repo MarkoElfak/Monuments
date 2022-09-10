@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="data"
+            type="rs.elfak.mosis.markoilic.monuments.data.model.UserModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".screens.ProfileActivity">
+
+        <ImageView
+            android:id="@+id/profileActivityInfoIV"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_add_friends"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/profileActivityPicture"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="50dp"
+            android:clickable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_default_profile_picture"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/profileActivityChangePictureLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/set_profile_picture"
+            android:textColor="@color/black"
+            android:textStyle="italic"
+            app:layout_constraintEnd_tostartOf="@id/profileActivityMap"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityPicture" />
+
+        <TextView
+            android:id="@+id/profileActivityUsername"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@{data.username}"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profileActivityPicture"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityInfoIV"
+            tools:text="Mareee" />
+
+        <TextView
+            android:id="@+id/profileActivityEmailLabel"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@{data.email}"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profileActivityPicture"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityUsername"
+            tools:text="data" />
+
+        <ImageView
+            android:id="@+id/profileActivityMap"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_map"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/profileActivityChangePictureLabel"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityEmailLabel" />
+
+        <TextView
+            android:id="@+id/profileActivityTravelPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/my_travel_points"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityMap" />
+
+        <TextView
+            android:id="@+id/profileActivityTravelPointsHolder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="155dp"
+            android:layout_marginLeft="155dp"
+            android:layout_marginTop="30dp"
+            android:text="333"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toStartOf="@id/profileActivityStar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityTravelPoints" />
+
+        <ImageView
+            android:id="@+id/profileActivityStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_monument"
+            app:layout_constraintStart_toEndOf="@id/profileActivityTravelPointsHolder"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityTravelPoints" />
+
+        <TextView
+            android:id="@+id/profileActivityTravelHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/my_travel_history"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityTravelPointsHolder" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/profileActivityRV"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityTravelHistory" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

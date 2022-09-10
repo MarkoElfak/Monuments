@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <layout>
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -29,6 +28,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:hint="@string/username"
+            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerUsernameLabel" />
@@ -53,6 +53,8 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerPasswordLabel" />
@@ -77,6 +79,8 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerConfirmPasswordLabel" />
@@ -101,6 +105,7 @@
             android:layout_marginTop="20dp"
             android:gravity="center"
             android:hint="@string/email"
+            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerEmailLabel" />
@@ -125,6 +130,7 @@
             android:layout_marginTop="30dp"
             android:gravity="center"
             android:hint="@string/date_of_birth"
+            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/registerDateOfBirthLabel" />
