@@ -1,5 +1,6 @@
 package rs.elfak.mosis.markoilic.monuments.screens
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -21,8 +22,15 @@ class LoginActivity : AppCompatActivity() {
 
         binding.loginActivityLoginBtn.setOnClickListener {
             lifecycleScope.launch(Dispatchers.Main) {
-                Repository.login(binding.loginEditTextUsername.text.toString(), binding.loginEditTextPassword.text.toString()).collect {
-                    Toast.makeText(this@LoginActivity, it.toString(), Toast.LENGTH_LONG).show()
+                Repository.login(binding.loginEditTextEmail.text.toString(), binding.loginEditTextPassword.text.toString()).collect {
+
+                    //intent = Intent(this@LoginActivity, MainActivity::class.java)
+
+                    Repository.saveUserInfo(this@LoginActivity, it)
+
+                    startActivity(intent)
+
+                    //Toast.makeText(this@LoginActivity, it.toString(), Toast.LENGTH_LONG).show()
                 }
             }
         }

@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import rs.elfak.mosis.markoilic.monuments.R
 import rs.elfak.mosis.markoilic.monuments.data.Repository
+import rs.elfak.mosis.markoilic.monuments.data.model.UserModel
 import rs.elfak.mosis.markoilic.monuments.databinding.ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
@@ -26,6 +27,9 @@ class RegisterActivity : AppCompatActivity() {
                 Repository.register(binding.registerEditTextUsername.text.toString(), binding.registerEditTextPassword.text.toString(),
                     binding.registerEditTextEmail.text.toString(), binding.registerEditTextDateOfBirth.text.toString()).collect {
 
+                    val user = UserModel(it.username, it.email, it.dateOfBirth)
+
+                    Repository.saveUserInfo(this@RegisterActivity, user)
                     Toast.makeText(this@RegisterActivity, it.toString(), Toast.LENGTH_LONG).show()
                 }
                 }

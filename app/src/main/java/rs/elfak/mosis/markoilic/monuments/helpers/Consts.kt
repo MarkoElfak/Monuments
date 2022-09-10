@@ -10,4 +10,6 @@ object Consts {
 
     val database = Firebase.database.reference
     val userCollection = database.child("users")
+
+    const val USER = "user"
 }
