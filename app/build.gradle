@@ -61,6 +61,7 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.google.code.gson:gson:2.9.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.github.ivankostadinovic:GenericAdapter:1.6.3'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

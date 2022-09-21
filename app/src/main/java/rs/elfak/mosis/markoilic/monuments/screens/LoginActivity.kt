@@ -24,7 +24,7 @@ class LoginActivity : AppCompatActivity() {
             lifecycleScope.launch(Dispatchers.Main) {
                 Repository.login(binding.loginEditTextEmail.text.toString(), binding.loginEditTextPassword.text.toString()).collect {
 
-                    //intent = Intent(this@LoginActivity, MainActivity::class.java)
+                    intent = Intent(this@LoginActivity, ProfileActivity::class.java)
 
                     Repository.saveUserInfo(this@LoginActivity, it)
 
