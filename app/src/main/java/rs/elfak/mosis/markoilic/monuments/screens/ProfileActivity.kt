@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import rs.elfak.mosis.markoilic.monuments.R
 import rs.elfak.mosis.markoilic.monuments.databinding.ActivityProfileBinding
 import rs.elfak.mosis.markoilic.monuments.databinding.SingleLocationLayoutBinding
@@ -32,6 +33,7 @@ class ProfileActivity : AppCompatActivity() {
 
         }
 
+        binding.profileActivityRV.layoutManager = LinearLayoutManager(this)
         binding.profileActivityRV.adapter = myLocationAdapter
     }
 }
