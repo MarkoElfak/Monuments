@@ -62,6 +62,8 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.9.0'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'com.github.ivankostadinovic:GenericAdapter:1.6.3'
+    implementation 'com.github.jkwiecien:EasyImage:3.2.0'
+    implementation 'com.github.bumptech.glide:glide:4.13.1'
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

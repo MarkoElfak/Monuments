@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
+
         <variable
             name="data"
             type="rs.elfak.mosis.markoilic.monuments.data.model.UserModel" />
@@ -36,29 +37,56 @@
             android:layout_marginTop="50dp"
             android:clickable="true"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_default_profile_picture"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/profileActivityChangePictureLabel"
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profileActivityEditBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
             android:layout_marginTop="25dp"
-            android:text="@string/set_profile_picture"
-            android:textColor="@color/black"
-            android:textStyle="italic"
-            app:layout_constraintEnd_toStartOf="@id/profileActivityMap"
+            android:text="@string/edit_profile"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/profileActivityPicture" />
 
-        <TextView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profileActivityChangePictureBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="25dp"
+            android:text="@string/set_profile_picture"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityPicture" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/profileActivitySaveBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profileActivityChangePictureLabel" />
+
+
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/profileActivityUsername"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:clickable="true"
+            android:enabled="false"
             android:focusable="true"
             android:gravity="center"
             android:text="@{data.username}"
@@ -69,11 +97,12 @@
             app:layout_constraintTop_toBottomOf="@id/profileActivityInfoIV"
             tools:text="Mareee" />
 
-        <TextView
-            android:id="@+id/profileActivityEmailLabel"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/profileActivityEmail"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
+            android:enabled="false"
             android:gravity="center"
             android:text="@{data.email}"
             android:textColor="@color/black"
@@ -153,9 +182,9 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@id/profileActivityTravelHistory" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

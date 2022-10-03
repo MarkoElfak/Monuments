@@ -1,5 +1,6 @@
 package rs.elfak.mosis.markoilic.monuments.data.remote
 
+import android.net.Uri
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
@@ -10,6 +11,7 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.tasks.await
 import rs.elfak.mosis.markoilic.monuments.data.model.RegisterObject
 import rs.elfak.mosis.markoilic.monuments.data.model.UserModel
+import rs.elfak.mosis.markoilic.monuments.data.model.UserModelDTO
 import rs.elfak.mosis.markoilic.monuments.helpers.Consts
 import java.util.HashMap
 
@@ -67,5 +69,17 @@ object FirebaseWrapper {
 
             emit(u)
         }
+    }
+
+    suspend fun updateUserWithPicture(user: UserModel, imageURI: Uri?) {
+        if (imageURI!=null) {
+            val storageReference = Consts.storage.child("profilePictures/${Consts.currentUserId}")
+            storageReference.delete()
+            storageReference.putFile(imageURI).await()
+
+            storageReference.downloadUrl.addOnCompleteListener { user.imageURL = it.result.toString() }.addOnFailureListener { }.await()
+        }
+
+        Consts.currentUserId?.let { Consts.userCollection.child(it).setValue(UserModelDTO(user)).await() }
     }
 }

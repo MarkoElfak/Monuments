@@ -21,6 +21,8 @@
     <string name="set_profile_picture">Set profile picture</string>
     <string name="my_travel_points">My travel points:</string>
     <string name="my_travel_history">My Travel history:</string>
+    <string name="save">Save</string>
+    <string name="edit_profile">Edit profile</string>
 
 
 </resources>
